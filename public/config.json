@@ -9,46 +9,41 @@
     "lang": {
         "en-US": {
             "name": "Template",
-          "description": "A Template for a custom Journey Builder activity",
-          "step1Label": "Configure Activity"
+          "description": "A Template for a custom Journey Builder activity"
         }
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
-			],
+          "inArguments":[],
           "outArguments": [],
-          "url": "https://<your-domain-here>/journeybuilder/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+          "url": "https://mrk-cloud.herokuapp.com/journeybuilder/execute",
+          "verb": "POST",
+          "body": "",
+          "header": "{ \"foo\": \"bar\" }",
+          "format": "json",
+          "useJwt": true,
+          "timeout": 10000
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "__application_key_from_appcenter_here__",
+      "applicationExtensionKey": "fa404ad7-405b-45d0-9d7e-194f31262264",
       "save": {
-        "url": "https://<your-domain-here>/journeybuilder/save",
+        "url": "https://mrk-cloud.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://<your-domain-here>/journeybuilder/publish",
+        "url": "https://mrk-cloud.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://<your-domain-here>/journeybuilder/stop",
+        "url": "https://mrk-cloud.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://<your-domain-here>/journeybuilder/validate",
+        "url": "https://mrk-cloud.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
